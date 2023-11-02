@@ -96,10 +96,3 @@ resource "azurerm_virtual_machine" "vm" {
     disable_password_authentication = false
   }
 }
-
-resource "azurerm_ssh_public_key" "vm" {
-  name                = "staticsite-vm"
-  resource_group_name = "${var.rg_name}"
-  location            = "${var.location}"
-  public_key          = file("~/.ssh/id_rsa.pub")
-}
