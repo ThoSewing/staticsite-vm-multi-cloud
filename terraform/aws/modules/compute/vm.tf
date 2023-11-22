@@ -66,7 +66,7 @@ resource "aws_instance" "instance2" {
 resource "aws_lb" "ec2_lb" {
     name               = "${var.ec2_lb_name}"
     load_balancer_type = "application"
-    subnets            = ["${var.subnet_id}"]
+    subnets            = ["${var.subnet_id}", "${var.subnet_id}"]
     security_groups    = [aws_security_group.sg_public.id]
 }
 
