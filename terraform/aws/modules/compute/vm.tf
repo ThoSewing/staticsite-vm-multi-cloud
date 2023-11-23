@@ -74,7 +74,7 @@ resource "aws_lb_target_group" "ec2_lb_tg" {
     name        = "${var.ec2_lb_tg_name}"
     protocol    = "${var.ec2_lb_tg_protocol}"
     port        = "${var.ec2_lb_tg_port}"
-    target_type = "instance"
+    target_type = "alb"
     vpc_id      = "${var.rede_id}"
 }
 

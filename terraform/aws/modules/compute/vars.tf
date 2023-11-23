@@ -33,7 +33,7 @@ variable "ec2_lb_tg_name" {
 
 variable "ec2_lb_tg_protocol" {
     type    = string
-    default = "HTTP"
+    default = "TCP"
 }
 
 variable "ec2_lb_tg_port" {
