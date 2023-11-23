@@ -71,10 +71,11 @@ resource "aws_lb" "ec2_lb" {
 }
 
 resource "aws_lb_target_group" "ec2_lb_tg" {
-    name     = "${var.ec2_lb_tg_name}"
-    protocol = "${var.ec2_lb_tg_protocol}"
-    port     = "${var.ec2_lb_tg_port}"
-    vpc_id   = "${var.rede_id}"
+    name        = "${var.ec2_lb_tg_name}"
+    protocol    = "${var.ec2_lb_tg_protocol}"
+    port        = "${var.ec2_lb_tg_port}"
+    target_type = "instance"
+    vpc_id      = "${var.rede_id}"
 }
 
 resource "aws_lb_listener" "ec2_lb_listener" {
