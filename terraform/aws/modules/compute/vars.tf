@@ -1,5 +1,6 @@
 variable "rede_id" {}
 variable "subnet_id" {}
+variable "subnet2_id" {}
 variable "rede_cidr" {}
 
 variable "ami" {

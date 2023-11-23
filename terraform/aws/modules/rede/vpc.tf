@@ -18,6 +18,14 @@ resource "aws_subnet" "sn_public" {
 
 }
 
+resource "aws_subnet" "sn_public2" {
+    vpc_id                  = aws_vpc.vpc.id
+    cidr_block              = "${var.subnet2_cidr}"
+    map_public_ip_on_launch = "true"
+    availability_zone       = "us-east-1b"
+
+}
+
 # ROUTE TABLE
 resource "aws_route_table" "rt_public" {
     vpc_id = aws_vpc.vpc.id
