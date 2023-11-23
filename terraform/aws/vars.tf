@@ -8,6 +8,11 @@ variable "subnet_cidr" {
     default = "10.0.1.0/24"
 }
 
+variable "subnet2_cidr" {
+    type    = string
+    default = "10.0.2.0/24"
+}
+
 variable "ami" {
     type    = string
     default = "ami-0f409bae3775dc8e5"
